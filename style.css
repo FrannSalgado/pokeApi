@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Press Start 2P'
+}
+
+body {
+
+    background-color: #0b0914;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.contenedor {
+    border: 3px solid black;
+    height: 700px;
+    width: 400px;
+    background-color: rgba(218, 77, 77, 0.904);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.card {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.img {
+    border: 3px solid black;
+    width: 97%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(173, 205, 233);
+}
+
+.pokemonSprite {
+    height: 100%
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    gap: 10px;
+}
+
+.buscador input {
+    height: 50%;
+    color: black;
+
+}
+
+.buscador button {
+    height: 50%;
+    width: 25%;
+    color: black;
+
+}
+
+.info {
+    height: 20%;
+    width: 97%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    font-size: 15px;
+
+}
+
+.decoration {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+}
+
+.a {
+    height: 80px;
+    width: 150px;
+    background-color: rgb(153, 133, 133);
+    margin: 10px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+}
