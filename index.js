@@ -18,8 +18,8 @@ const requesPokemon = async (pokemon) => {
 const inputNum = document.getElementById("numero");
 const submitButton = document.getElementById("search");
 const card = document.getElementById("card");
-// const prev = document.getElementById("prev");
-// const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 const cardReset = card.innerHTML
 
 
@@ -67,26 +67,31 @@ const render = async () => {
 
 const reset = () => {
     card.innerHTML = cardReset;
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    next.addEventListener("click", nextPoke);
+    prev.addEventListener("click", prevPoke);
+
 }
 
-// const nextPoke = (e) => {
-//     const nex = +inputNum.value;
-//     inputNum.value = (nex + 1).toString();
-//     renderCheck(e);
-// }
-// const prevPoke = (e) => {
-//     if (inputNum.value === "" || inputNum.value === 1 || inputNum.value === 0) {
-//         return inputNum.value = "1"
-//     }
-//     const prev = +inputNum.value;
-//     inputNum.value = (prev - 1).toString();
-//     renderCheck(e);
-// }
+const nextPoke = () => {
+    const nex = +inputNum.value;
+    inputNum.value = (nex + 1).toString();
+    submitButton.click();
+}
+const prevPoke = () => {
+    if (inputNum.value === "" || inputNum.value === 1 || inputNum.value === 0) {
+        return inputNum.value = "1"
+    }
+    const prev = +inputNum.value;
+    inputNum.value = (prev - 1).toString();
+    submitButton.click();
+}
 
 
 const init = () => {
-    // next.addEventListener("click", nextPoke);
-    // prev.addEventListener("click", prevPoke);
+    next.addEventListener("click", nextPoke);
+    prev.addEventListener("click", prevPoke);
     submitButton.addEventListener("click", renderCheck);
 
 }
