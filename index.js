@@ -7,6 +7,9 @@ const requesPokemon = async (pokemon) => {
         const data = await response.json();
         return data;
     } catch (error) {
+
+        info.innerHTML = `<h2 id="nombre">Pokemon No Encontrado, Intente con Otro numero </h2>`
+
         console.log("Error")
     }
 }
@@ -37,7 +40,6 @@ const render = async () => {
     if (inputNum.value === "" || inputNum.value === 0) {
         info.innerHTML = `<h2 id="nombre">Ingrese un numero</h2>`
         return console.log("ERROR");
-
     }
 
     const data = await requesPokemon(inputNum.value);
